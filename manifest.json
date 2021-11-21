@@ -13,7 +13,8 @@
   
     "browser_action": {
         "default_title": "Test",
-        "default_popup": "index.html"
+        "default_popup": "index.html",
+        "default_icon" : "icon.png"
     },
     "permissions": [
         "activeTab",

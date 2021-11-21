@@ -12,8 +12,11 @@ document.getElementById("test").addEventListener('click', () => {
             // console.log(emailparentclass[i].textContent);
          }
         
-         console.log(result)
-        return document.getElementById("test").innerHTML = result;
+        result = result.replace('>','')
+        result = result.replace('<','');
+        console.log(result)
+        return result;
+        
     }
 
     //We have permission to access the activeTab, so we can call chrome.tabs.executeScript:

@@ -1,6 +1,6 @@
 window.addEventListener('load', function (evt) {
     chrome.extension.getBackgroundPage().chrome.tabs.executeScript(null, {
-        file: 'Content.js'
+        file: 'test.js'
     });;
 });
 

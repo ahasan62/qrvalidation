@@ -1,7 +1,6 @@
-chrome.extension.onMessage.addListener(
-    function(request, sender, sendResponse) {
-      if (request.text && (request.text == "getDOM")) {
-        sendResponse({ dom: document.body.innerHTML });
-      }
-    }
-  );
+chrome.runtime.onMessage.addListener(function(message, sender, sendResponse){
+
+    console.log('HEYO! i am a content script!');
+    console.log(message);
+
+});
