@@ -1,3 +1,7 @@
-const emailTag = document.getElementsByClassName("go")
-window.alert("Hello")
-document.getElementsByClassName("go").onclick = function () {alert("hello");}
+chrome.extension.onMessage.addListener(
+    function(request, sender, sendResponse) {
+      if (request.text && (request.text == "getDOM")) {
+        sendResponse({ dom: document.body.innerHTML });
+      }
+    }
+  );
